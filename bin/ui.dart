@@ -2,40 +2,50 @@ import 'dart:io';
 
 class Ui {
 
-  int menuInicial(){
+ menuInicial(){
     print('Selecione a sua opção:\n1.Aluno\n2.Professor');
     int opcao = int.parse(stdin.readLineSync()!);
-    return funcionalidades(opcao);
+    if(opcao == 1){
+      aluno();
+    } else if (opcao == 2){
+      professor();
+    } else {
+      print('Opção não existente');
+    }
   }
 
-  funcionalidades(int opcao){
+  aluno(){
+    funcionalidades();
+  }
 
-    if (opcao == 1){
+  professor(){
+    funcionalidades();
+  }
 
-    } else (opcao == 2){
-
-    } else {
-      print('Nome não encontrado');
-    }
-
-
-    print('1.Criar\n2.Cadastrar\n3.Alterar');
-    int seleciona =  int.parse(stdin.readLineSync()!);
-
+  funcionalidades(){
+    print('1.Criar\n2.Listar\n3.Alterar');
+    int opcao =  int.parse(stdin.readLineSync()!);
     switch(opcao){
       case 1:
-
+        criar();
       case 2:
-
+        listar();
       case 3:
-
+        alterar();
       default:
         print('Opção não disponivel');
     }
   }
  
-  
-  
+  listar(){
 
+  }
 
+  criar(){
+
+  }
+
+  alterar(){
+
+  }
 }
